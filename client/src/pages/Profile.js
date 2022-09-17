@@ -6,10 +6,10 @@ import Footer from '../components/navigation/Footer'
 
 
 // Get user data
-fetch('http://example.com/songs')
-	.then(response => response.json())
-	.then(data => console.log(data))
-  .catch(err => console.error(err));
+// fetch('http://example.com/songs')
+// 	.then(response => response.json())
+// 	.then(data => console.log(data))
+//   .catch(err => console.error(err));
   
 const sample_data = {
   username: "user's username",

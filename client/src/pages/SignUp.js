@@ -1,64 +1,126 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
-import './SignUp.css';
+import React, { useState, useContext } from 'react'
+import { Navigate } from 'react-router-dom'
 
-class SignupForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstName: '',
-      lastName: '',
-      username: '',
-      password: '',
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.update = this.update.bind(this);
-  }
 
-  handleSubmit() {
-    // store user in database
-  }
+// Account Info
+import {CognitoUserAttribute} from 'amazon-cognito-identity-js';
+import { AccountContext } from '../context/Account';
+import UserPool from '../context/UserPool';
 
-  update(field) {
-    return e => this.setState({[field]: e.target.value});
-  }
+// Components
+import SpinnerLoader from "../components/SpinnerLoader";
 
-  render() {
-    return (
-      <div className="signup-form-parent">
-        <div className="signup-form-container">
-          <div className="signup-header-container">
-            <p className="signup-header">Sign up here!</p>
+const SignUp = () => {
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [username, setUserName] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  // const [emailSignUp, setEmailSignUp] = useState("");
+  const [passwordSignUp, setPasswordSignUp] = useState("");
+  
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [loggedIn, setLogin] = useState(
+    JSON.parse(localStorage.getItem('is-login')) || false
+  );
+  // const {authenticate} = useContext(AccountContext);
+
+  /* Control login or signup form to show */
+  const [loginForm, setloginForm] = useState(true);
+
+      if (loggedIn) {
+      return <Navigate to="/home" replace />;
+    } 
+
+  const onSubmitSignUp = (event) => {
+      console.log("test login")
+      setIsLoading(true);
+
+      event.preventDefault();
+      UserPool.signUp(username, passwordSignUp, [], null, (err, data) => {
+          if (err) {
+            console.error(err);
+            setIsLoading(false);
+            alert(err);
+          }
+          setIsLoading(false);
+          setloginForm(true);
+          console.log(data);
+      });
+  };
+  
+  const submitForm = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const inputObject = Object.fromEntries(formData);
+
+    console.log(inputObject);
+  };
+
+    // var roleAttribute = new CognitoUserAttribute(
+    //   {
+    //     Name: 'name',
+    //     Value: firstName.trim(),
+    //   },
+    //   // {
+    //   //   Name: 'family name',
+    //   //   Value: lastName.trim(),
+    //   // },
+    //   // {
+    //   //   Name: 'phone number',
+    //   //   Value: phone.trim(),
+    //   // },
+    //   // {
+    //   //   Name: 'zoneinfo',
+    //   //   Value: zipCode.trim(),
+    //   // }
+    // );
+
+  return (
+      <div className='login-page'>
+          {isLoading ? <SpinnerLoader /> : null}
+        
+          {loginForm ? 
+          <div className='login'>
+            <div className='login__container'>
+              <form className='login__form' onSubmit={onSubmit}>
+                <h1>Login</h1>
+                <div>
+                  <input name="userNameLoginIn" placeholder="userNameLoginIn" />
+                </div>
+                <div>
+                  <input name="password" placeholder="password" />
+                </div>
+                <button type="submit">Login</button>
+              </form>
+            </div>
           </div>
-          <form onSubmit={() => this.handleSubmit()}>
-            <div className="signup-field">
-              <label className="signup-label">First Name</label>
-              <input onChange={this.update('firstName')}/>
+        : 
+          <div className='login'>
+            <div className='login__container'>
+
+              <form className='login__form' onSubmit={onSubmitSignUp}>
+                <h1>Create Account</h1>
+                <div>
+                  <input name="first_name" placeholder="first_name" />
+                </div>
+                <div>
+                  <input name="last_name" placeholder="last_name" />
+                </div>
+                <div>
+                  <input name="userNameSingUp" placeholder="userNameSingUp" />
+                </div>
+              </form>
+              <button onClick={() => setloginForm(true)} className='plain__btn' >Already have an account? Log In</button>
             </div>
-            <div className="signup-field">
-              <label className="signup-label">Last Name</label>
-              <input onChange={this.update('lastName')}/>
-            </div>
-            <div className="signup-field">
-              <label className="signup-label">Username</label>
-              <input onChange={this.update('lastName')}/>
-            </div>
-            <div className="signup-field">
-              <label className="signup-label">Password</label>
-              <input onChange={this.update('lastName')}/>
-            </div>
-            <div className="signup-footer">
-              <button type="submit" className="signup-submit">Submit</button>
-              <div className="to-login">Already have an account? <Link to="/signin" className="sign-in-btn">Sign in</Link></div>
-            </div>
-          </form>
-        </div>
-        <div className="signup-img">
-          <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
-        </div>
-      </div>
-    )
-  }
+          </div>
+        }
+    </div>
+  )
 }
 
-export default SignupForm;
+export default SignUp
