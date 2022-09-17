@@ -5,6 +5,8 @@ import { useMemo } from 'react';
 import React from 'react';
 // require('dotenv').config()
 import axios from "axios"
+
+import AddModal from '../components/AddModal/AddModal'
 {/* <script src="https://unpkg.com/axios/dist/axios.min.js"></script> */}
 
 
@@ -65,12 +67,15 @@ export default function Map(props) {
 
     return (
       <div className="maps-page">
-        <div className="events-container">
-          <EventItem />
-          <EventItem />
-          <EventItem />
-          <EventItem />
+        <div>
+          <div className="events-container">
+            <EventItem />
+            <EventItem />
+            <EventItem />
+            <EventItem />
+          </div>
         </div>
+        
         <Map />
       </div>
     )
