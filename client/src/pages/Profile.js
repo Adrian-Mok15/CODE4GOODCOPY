@@ -1,8 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+import {Button} from '@mui/material'
+
 import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 import { AccountContext } from '../context/Account';
 import { Navigate } from 'react-router-dom'
@@ -34,6 +38,7 @@ export default function Profile() {
     logout();
     localStorage.setItem('is-login', JSON.stringify(false));
     setLogin(false);
+    window.location = window.location.href;
   }
 
   if (!loggedIn) {
@@ -58,6 +63,8 @@ export default function Profile() {
                 <div className="ms-3" style={{ marginTop: '140px', marginLeft: '30px'}}>
                   <MDBTypography tag="h5" style={{color:'white'}}>{sample_data.name}</MDBTypography>
                   <MDBCardText>{sample_data.user_location}</MDBCardText>
+                  <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+                  <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
                 </div>
               </div>
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
