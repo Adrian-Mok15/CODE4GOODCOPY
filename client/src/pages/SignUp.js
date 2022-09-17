@@ -98,21 +98,21 @@ const SignUp = () => {
                   <input type="password" className='login__input' placeholder='Password' value={passwordSignUp} onChange={(event) => setPasswordSignUp(event.target.value)} required />
               </div>
               <div className="signup-footer">
-                <button className='btn login__btn' type='submit'>Sign Up</button>
+                <button className='signup-submit' type='submit'>Sign Up</button>
               </div>
               </form>
             <button onClick={() => {
               setloginForm(false)
               
-            }} className='signup-submit' >Already have an account? Log In</button>
+            }} className='to-login' >Already have an account?</button>
             </div>
             <div className="signup-img">
             <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
           </div>
         </div>
         : 
-        <div className='login'>
-            <div className='login__container'>
+        <div className="signup-form-parent">
+          <div className="signup-form-container">
             <form className='login__form' onSubmit={onSubmit}>
               <h1>Login</h1>
               <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
