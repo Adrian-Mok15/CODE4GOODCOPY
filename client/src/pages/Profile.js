@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import {Button} from '@mui/material'
-
+import {Button as B} from 'antd'
 import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
@@ -121,7 +121,10 @@ export default function Profile() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <button className='plain__btn' onClick={logoff}>Logout</button>
+      <B onClick={logoff}>
+        Logout
+      </B>
+      {/* <button className='plain__btn' onClick={logoff}>Logout</button> */}
 
       <Footer />
     </div>

@@ -16,9 +16,10 @@ dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
 
 const Alumni = () => {
   return (
+
     <Page>
       <div className="head">
-      <Typography sx = {{ fontSize: '50px'}}> Alumni Portal </Typography>
+      <Typography sx = {{ fontFamily:'system-ui', fontSize: '50px'}}> Alumni Portal </Typography>
       </div>
       
     
@@ -269,7 +270,7 @@ export default Alumni;
 
 
 const AlumniCard = styled(Card)({
-  display: 'inline-block', padding: '10px', margin: '30px'
+  display: 'inline-block', padding: '10px', margin: '30px', fontFamily:'system-ui'
 });
 
 const Page = styled.div`
@@ -278,5 +279,5 @@ const Page = styled.div`
   height: 100vh;
   width: 100%;
   background-color: #F7E9CC;
-  allign-items: 
+  font-family: system-ui
 `

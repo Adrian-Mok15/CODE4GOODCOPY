@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <img src={jream} alt="jream" width= "100%"></img>
       <h1 id="about" style={{ marginTop: "10%" }}>About Us</h1>
-      <p style={{ width: "50%", margin: "auto" }}>
+      <p style={{ width: "50%", margin: "auto", fontSize: '18px' }}>
         Dealing with the challenges of today requires problem-solvers who bring different perspectives and are willing to take risks. The Jream Foundation, Inc. emerged out of a pursuit to inspire and support the community, and a desire for actions to speak louder than words. Established in 2020, we’re an organization driven by progressive ideas, bold actions, and a strong foundation of support. Contact us to learn more and get involved. Here at Jream Foundation, we see the value in everyone. We want to be a catalyst for positive change, and since our beginnings in 2020, we’ve been driven by the same ideas we initially founded our Nonprofit Organization upon support, empowerment, and progress. Learn more about our mission, our vision, and how we go about making the changes we want to see.
       </p>
 
