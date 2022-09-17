@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react'
 import { routes } from './constant';
 import { useState } from 'react';
+import {Link as LinkRS} from "react-scroll"
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Menu from "./Menu"
@@ -16,8 +17,23 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 <RightNav>
                     <NavRoutes>
                         {routes.map((route) => {
-                            if (route.subRoutes) {
-                                return <Menu route={route} key={route.name} />
+                            if (route.name === 'About') {
+                                return (
+                                    <LinkRS to="about" spy={true} smooth={true} offset={50}>
+                                        <NavRoute to={route.link} key={route.name}>
+                                            {route.name}
+                                        </NavRoute>
+                                    </LinkRS>
+                                )
+                            }
+                            if (route.name === 'Contact') {
+                                return (
+                                    <LinkRS to="contactform" spy={true} smooth={true} offset={2}>
+                                        <NavRoute to={route.link} key={route.name}>
+                                            {route.name}
+                                        </NavRoute>
+                                    </LinkRS>
+                                )
                             }
                             return (
                                 <NavRoute to={route.link} key={route.name}>
@@ -45,7 +61,9 @@ const DrawerButton = styled.button`
 
 
 const SNavbar = styled.nav`
-    background-color: #0d1026;
+    background-color: #ba9d79;
+    margin-bottom: 0px;
+    
 `
 const NavContainer = styled.div`
     padding: 1rem;
@@ -55,7 +73,7 @@ const NavContainer = styled.div`
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 `
 const SNavbarBrand = styled.h2`
     font-size: 1rem;
@@ -69,7 +87,6 @@ const SNavbarBrand = styled.h2`
 `
 const RightNav = styled.div`
     display: flex;
-    gap: 2.4rem;
 `
 const NavRoutes = styled.div`
     display: flex;
@@ -89,7 +106,7 @@ const NavRoute = styled(Link)`
     transition: 0.3s ease;
     &:hover {
         transition: 0.3s ease;
-        color: #2f4e92;
+        color: #000;
         background-color: white;
     }
 `
