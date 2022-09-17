@@ -1,4 +1,32 @@
 .head{
-    margin: 5%;
+    /* margin-top: 5%; */
     font-size: 'system-ui' !important;
 }
+
+.ant-input-affix-wrapper{
+    border: 0.5px solid #000000 !important;
+    border-radius: 10px !important;
+    width: 75% !important;
+}
+
+.ant-input-affix-wrapper > span{
+    text-align: right;
+    padding-right: -25px !important;
+}
+
+
+.MuiSvgIcon-root{
+    color: #ba9d79;
+}
+.MuiSvgIcon-root:hover{
+    color: black;
+    cursor: pointer;
+}
+/* .ant-input{
+    border: 0.5px solid #000000 !important;
+    border-radius: 10px !important;
+}
+
+.ant-input:hover{
+    border: #ba9d79;
+} */
