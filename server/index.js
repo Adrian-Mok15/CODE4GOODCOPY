@@ -8,6 +8,9 @@ require('dotenv').config();
 // app
 const app = express();
 
+const User = require('./models/User');
+const Event = require('./models/Event')
+
 
 
 // db
@@ -24,8 +27,8 @@ app.use(morgan("dev"));
 app.use(cors({origin: true, credentials: true}));
 
 
-
 // routes
+
 
 
 
