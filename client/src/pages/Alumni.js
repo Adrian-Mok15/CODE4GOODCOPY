@@ -6,257 +6,51 @@ import EmailIcon from '@mui/icons-material/Email';
 
 
 const dataAlumni = []
-dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
-dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
-dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
-dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
+dataAlumni.push(new Array("John S", "https://randomuser.me/api/portraits/men/72.jpg"))
+dataAlumni.push(new Array("Nandan T", "https://randomuser.me/api/portraits/men/30.jpg"))
+dataAlumni.push(new Array("Roshan M", "https://randomuser.me/api/portraits/men/19.jpg"))
+dataAlumni.push(new Array("Adrian L", "https://randomuser.me/api/portraits/men/13.jpg"))
+dataAlumni.push(new Array("Alexis P", "https://randomuser.me/api/portraits/women/10.jpg"))
+dataAlumni.push(new Array("Santiago R", "https://randomuser.me/api/portraits/men/9.jpg"))
+dataAlumni.push(new Array("Sheldon M", "https://randomuser.me/api/portraits/men/14.jpg"))
+dataAlumni.push(new Array("Michelle W", "https://randomuser.me/api/portraits/women/3.jpg"))
+dataAlumni.push(new Array("Nandan T", "https://randomuser.me/api/portraits/men/75.jpg"))
+dataAlumni.push(new Array("Roshan M", "https://randomuser.me/api/portraits/men/9.jpg"))
+dataAlumni.push(new Array("Adrian L", "https://randomuser.me/api/portraits/men/34.jpg"))
+dataAlumni.push(new Array("Alexis P", "https://randomuser.me/api/portraits/women/85.jpg"))
 
 
 const Alumni = () => {
   return (
 
     <Page>
-    <Typography sx = {{ fontFamily: "Raleway", fontSize: '30px'}}> Alumni Portal </Typography>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-    
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-          Jream User
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://picsum.photos/200/200.jpg"
-      />
-      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
-      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
-    </AlumniCard>
-
-    <Button onClick={sendIt}> Email JS - Send Email Test </Button>
-
-    </Page>
+    <Typography sx={{ fontFamily: "Roboto", fontSize: '30px', marginTop: '10px'}}> Alumni Portal </Typography>
+    <><>
+      {dataAlumni.map((user) => {
+        return (
+          <AlumniCard>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ flex: '1 0 auto' }}>
+                <Typography variant="h5">
+                  {user[0]}
+                </Typography>
+                <Typography variant="subtitle2" color="text.secondary">
+                  Alumni
+                </Typography>
+              </CardContent>
+            </Box>
+            <CardMedia
+              component="img"
+              sx={{ width: 150 }}
+              image= {user[1]} />
+            <Button href='https://www.linkedin.com'><LinkedInIcon padding='20px'> </LinkedInIcon></Button>
+            <Button href='mailto:support@jreamfoundation.org'><EmailIcon padding='20px'> </EmailIcon></Button>
+          </AlumniCard>
+        );
+      })}
+    </>
+      </>
+      </Page>
   )
 }
 
