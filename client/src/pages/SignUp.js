@@ -13,7 +13,7 @@ import SpinnerLoader from "../components/SpinnerLoader";
 
 const SignUp = () => {
   const [username, setUserName] = useState("User1");
-  const [password, setPassword] = useState("#CFG-100");
+  const [password, setPassword] = useState("#CFG-100a");
   const [firstName, setFirstName] = useState("Tom");
   const [lastName, setLastName] = useState("Lo");
   const [usernameSignUp, setUserNameSignUp] = useState("User1");
