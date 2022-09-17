@@ -1,6 +1,6 @@
 # team-13
 
-Jream Foundation Code for <Good>
+Jream Foundation Code for Good
 
 Prompt:
 
