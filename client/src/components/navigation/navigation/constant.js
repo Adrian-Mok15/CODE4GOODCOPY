@@ -19,8 +19,8 @@ export const routes = [
     name: "Sign Up",
     link: "/signup",
   },
-  {
-    name: "Contact",
-    link: "/",
-  },
+  // {
+  //   name: "Contact",
+  //   link: "/",
+  // },
 ];

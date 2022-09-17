@@ -11,8 +11,6 @@ import UserPool from '../context/UserPool';
 import SpinnerLoader from "../components/SpinnerLoader";
 
 const SignUp = () => {
-  // const [email, setEmail] = useState("");
-  // const [zipCode, setZipCode] = useState("");
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -37,6 +35,7 @@ const SignUp = () => {
       setIsLoading(true);
 
       event.preventDefault();
+      // AWS Cognito create account for user
       UserPool.signUp(usernameSignUp, passwordSignUp, [], null, (err, data) => {
           if (err) {
             console.error(err);
@@ -47,6 +46,8 @@ const SignUp = () => {
           setloginForm(false);
           console.log(data);
       });
+      // Send user info: usernameSignUp, passwordSignUp, firstName, lastName to DB
+      // axios.post
     };
   
   const onSubmit = (event) => {
@@ -69,30 +70,44 @@ const SignUp = () => {
 
   return (
       <div className='login-page'>
-          {isLoading ? <SpinnerLoader /> : null}
+        {isLoading ? <SpinnerLoader /> : null}
         
       {loginForm ? 
-          <div className='login'>
-            <div className='login__container'>
+          <div className="signup-form-parent">
+          <div className="signup-form-container">
+            <div className="signup-header-container">
+              <p className="signup-header">Sign up here!</p>
+            </div>
 
-              <form className='login__form' onSubmit={onSubmitSignUp}>
-                  <h1>Create Account</h1>
+            <form className='login__form' onSubmit={onSubmitSignUp}>
+              <div className="signup-field">
+                  <label className="signup-label">First Name</label>
                   <input type="text" placeholder="First Name" className='login__input' value={firstName} onChange={(event) => setFirstName(event.target.value)} required />
-                  <br />
+              </div>
+              <div className="signup-field">
+              <label className="signup-label">Last Name</label>
                   <input type="text" placeholder="Last Name" className='login__input' value={lastName} onChange={(event) => setLastName(event.target.value)} required />
-                  <br />
-                  <input type="text" placeholder="User Name" className='login__input' value={usernameSignUp} onChange={(event) => setUserNameSignUp(event.target.value)} required />
-                  <br />
+              </div>
+              <div className="signup-field">
+              <label className="signup-label">Username</label>
+              <input type="text" placeholder="User Name" className='login__input' value={usernameSignUp} onChange={(event) => setUserNameSignUp(event.target.value)} required />
+              </div>
+              <div className="signup-field">
+              <label className="signup-label">Password</label>
                   <input type="password" className='login__input' placeholder='Password' value={passwordSignUp} onChange={(event) => setPasswordSignUp(event.target.value)} required />
-                  <br />
-                  
-                  <button className='btn login__btn' type='submit'>Sign Up</button>
+              </div>
+              <div className="signup-footer">
+                <button className='btn login__btn' type='submit'>Sign Up</button>
+              </div>
               </form>
             <button onClick={() => {
               setloginForm(false)
-              console.log(loginForm)
+              
             }} className='plain__btn' >Already have an account? Log In</button>
             </div>
+            <div className="signup-img">
+            <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
+          </div>
         </div>
         : 
         <div className='login'>
