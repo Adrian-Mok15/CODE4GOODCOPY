@@ -1,8 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+import {Button} from '@mui/material'
+
 import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 import { AccountContext } from '../context/Account';
 import { Navigate } from 'react-router-dom'
@@ -15,12 +19,12 @@ import { Navigate } from 'react-router-dom'
 //   .catch(err => console.error(err));
   
 const sample_data = {
-  username: "user's username",
+  username: "Tyler Lo",
   user_location: "Brooklyn, 11217",
-  name: "user's name",
+  name: "John Smith",
   profile_pic: "test",
   user_type: "alunmi",
-  about: 'In no impression assistance contrasted. Manners she wishing justice hastily new anxious.At discovery discourse departure objection we. Few extensive add delighted tolerably sincerity her. Law ought him least enjoy decay one quick court. Expect warmly its tended garden him esteem had remove off. Effects dearest staying now sixteen nor improve.',
+  about: 'Hi, my name is Tyler, and I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you.',
   member_since: "2020",
   events_attended: '45',
   badges: '11',
@@ -34,6 +38,7 @@ export default function Profile() {
     logout();
     localStorage.setItem('is-login', JSON.stringify(false));
     setLogin(false);
+    window.location = window.location.href;
   }
 
   if (!loggedIn) {
@@ -51,13 +56,15 @@ export default function Profile() {
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                   <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt="Generic placeholder image" className="img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
-                  <button outline color="dark" style={{marginTop:'6px', marginLeft:'40px', height: '50px', zIndex: '2'}}>
+                  <MDBBtn outline color="dark" style={{marginTop:'6px', marginLeft:'40px', height: '39px', zIndex: '2'}}>
                     Edit profile
-                  </button>
+                  </MDBBtn>
                 </div>
                 <div className="ms-3" style={{ marginTop: '140px', marginLeft: '30px'}}>
                   <MDBTypography tag="h5" style={{color:'white'}}>{sample_data.name}</MDBTypography>
                   <MDBCardText>{sample_data.user_location}</MDBCardText>
+                  <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+                  <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
                 </div>
               </div>
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>

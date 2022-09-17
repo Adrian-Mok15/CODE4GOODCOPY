@@ -13,7 +13,7 @@ var contactdetail = {
 
 
 const sendIt = function() {
-    emailjs.send('service_kdfqz4m', 'template_7jesark', contactdetail, public_key)
+    emailjs.send('service_kdfqz4m', 'template_7jesark', contactdetail, 'D1eYFDiYusByCe98H')
     .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
     }, function(error) {

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { routes } from './constant';
 import {Link} from "react-router-dom";
 
 const Menu = ({route}) => {

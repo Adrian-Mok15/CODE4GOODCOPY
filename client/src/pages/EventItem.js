@@ -1,6 +1,7 @@
 import { IoMdWalk } from 'react-icons/io';
 import './EventItem.css';
 import React from 'react';
+import sendIt from './SendEmail';
 
 class EventItem extends React.Component {
     constructor(props) {
@@ -16,10 +17,10 @@ class EventItem extends React.Component {
                             <div className="event-name">Event name</div>
                             <div className="event-time">Event time</div>
                         </div>
-                        <div className="attend-event">
+                        <button className="attend-event" onClick={sendIt}>
                             Attend event
                             <IoMdWalk />
-                        </div>
+                        </button>
                     </div>
                     <div className="attendees-container">
                         <div className="attendees">

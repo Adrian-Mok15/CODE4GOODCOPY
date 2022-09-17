@@ -1,15 +1,23 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
-import {Card, Box, Typography, CardContent, CardMedia, Button} from '@mui/material'
+import {Card, Box, Typography, CardContent, CardMedia, Button, Avatar, IconButton} from '@mui/material'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+
 import sendIt from './SendEmail'
+
+
+const dataAlumni = []
+dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
+dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
+dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
+dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
+
 
 const Alumni = () => {
   return (
-
     <Page>
-
     <Typography sx = {{ fontFamily: "Raleway", fontSize: '30px'}}> Alumni Portal </Typography>
-
     <AlumniCard>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
@@ -17,15 +25,17 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+            Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
 
 
@@ -36,15 +46,17 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+          Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
 
     <AlumniCard>
@@ -54,15 +66,17 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+          Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
 
     <AlumniCard>
@@ -72,15 +86,116 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+          Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
+    
+    </AlumniCard>
+    <AlumniCard>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography variant="h5">
+            Alumni
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+          Jream User
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 150 }}
+        image="https://picsum.photos/200/200.jpg"
+      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
+    </AlumniCard>
+
+    <AlumniCard>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography variant="h5">
+            Alumni
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+          Jream User
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 150 }}
+        image="https://picsum.photos/200/200.jpg"
+      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
+    </AlumniCard>
+
+    
+    <AlumniCard>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography variant="h5">
+            Alumni
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+          Jream User
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 150 }}
+        image="https://picsum.photos/200/200.jpg"
+      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
+    </AlumniCard>
+    <AlumniCard>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography variant="h5">
+            Alumni
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+          Jream User
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 150 }}
+        image="https://picsum.photos/200/200.jpg"
+      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
+    </AlumniCard>
+    <AlumniCard>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography variant="h5">
+            Alumni
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+          Jream User
+          </Typography>
+        </CardContent>
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 150 }}
+        image="https://picsum.photos/200/200.jpg"
+      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
     <AlumniCard>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -96,8 +211,10 @@ const Alumni = () => {
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
     <AlumniCard>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -106,15 +223,17 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+          Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
     <AlumniCard>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -123,100 +242,17 @@ const Alumni = () => {
             Alumni
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            First Last
+          Jream User
           </Typography>
         </CardContent>
       </Box>
       <CardMedia
         component="img"
         sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+        image="https://picsum.photos/200/200.jpg"
       />
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-      />
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-      />
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-      />
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-      />
-    </AlumniCard>
-    <AlumniCard>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography variant="h5">
-            Alumni
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            First Last
-          </Typography>
-        </CardContent>
-      </Box>
-      <CardMedia
-        component="img"
-        sx={{ width: 150 }}
-        image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-      />
+      <Button href= 'https://www.linkedin.com'><LinkedInIcon padding = '20px'> </LinkedInIcon></Button>
+      <Button href= 'mailto:support@jreamfoundation.org'><EmailIcon padding = '20px'> </EmailIcon></Button>
     </AlumniCard>
 
     <Button onClick={sendIt}> Email JS - Send Email Test </Button>

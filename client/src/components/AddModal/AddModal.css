@@ -1,4 +1,4 @@
-Button, #addButton{
+.ant-btn-primary, #addButton, .ant-modal-footer > button{
     background-color: #BA9D79 !important;
     color: white;
     border: none !important;

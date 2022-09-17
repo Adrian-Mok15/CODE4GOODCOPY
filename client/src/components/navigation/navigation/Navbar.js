@@ -8,6 +8,8 @@ import { FaBars } from "react-icons/fa";
 import Menu from "./Menu"
 
 const Navbar = ({ toggleDrawer, routes }) => {
+  const loggedIn = (JSON.parse(localStorage.getItem('is-login')));
+
     return (
         <SNavbar>
             <NavContainer>
@@ -26,13 +28,11 @@ const Navbar = ({ toggleDrawer, routes }) => {
                             //         </LinkRS>
                             //     )
                             // }
-                            if (route.name === 'Contact') {
+                            if (route.name === 'Sign Up' && loggedIn) {
                                 return (
-                                    <LinkRS to="contactform" spy={true} smooth={true} offset={2}>
-                                        <NavRoute to={route.link} key={route.name}>
-                                            {route.name}
-                                        </NavRoute>
-                                    </LinkRS>
+                                    <NavRoute to="/profile" key="profile">
+                                        Profile
+                                    </NavRoute>
                                 )
                             }
                             return (
