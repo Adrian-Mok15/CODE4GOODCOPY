@@ -3,8 +3,17 @@ import { Form, Input, Button } from 'antd';
 import './SignIn.css'
 const SignIn = props => {
 
-    const onFinish = (values) => {
-    }
+    // const onFinish = (values) => {
+    // }
+
+    const onFinish = (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(e.target);
+        const inputObject = Object.fromEntries(formData); // convert the FormData object to a JSON object
+    
+        console.log(inputObject);
+    };
 
     return (
         <div class="sign-up">
