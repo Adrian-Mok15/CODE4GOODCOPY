@@ -4,8 +4,8 @@ export const routes = [
     link: "/",
   },
   {
-    name: "Map",
-    link: "/map",
+    name: "Community",
+    link: "/community",
   },
   {
     name: "Alumni",

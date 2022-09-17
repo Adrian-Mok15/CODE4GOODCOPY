@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Navigate } from 'react-router-dom'
-
+import axios from 'axios'
 import "./SignUp.css"
 
 // Account Info
@@ -18,6 +18,7 @@ const SignUp = () => {
   const [lastName, setLastName] = useState("");
   const [usernameSignUp, setUserNameSignUp] = useState("");
   const [passwordSignUp, setPasswordSignUp] = useState("");
+  const [memberType, setMemberType] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
   const [loggedIn, setLogin] = useState(
@@ -25,7 +26,6 @@ const SignUp = () => {
   );
   const {authenticate} = useContext(AccountContext);
 
-  /* Control login or signup form to show */
   const [loginForm, setloginForm] = useState(true);
 
     if (loggedIn) {
@@ -46,9 +46,15 @@ const SignUp = () => {
           setIsLoading(false);
           setloginForm(false);
           console.log(data);
+          axios.post('/users/add', {
+            firstName: firstName,
+            lastName: lastName,
+            _id: username,
+            password: password,
+            memberType: memberType
+          });
+          window.preventDefault();
       });
-      // Send user info: usernameSignUp, passwordSignUp, firstName, lastName to DB
-      // axios.post
     };
   
   const onSubmit = (event) => {
@@ -96,6 +102,10 @@ const SignUp = () => {
               <div className="signup-field">
               <label className="signup-label">Password</label>
                   <input type="password" className='login__input' placeholder='Password' value={passwordSignUp} onChange={(event) => setPasswordSignUp(event.target.value)} required />
+              </div>
+              <div className="signup-field">
+              <label className="signup-label">Member Type</label>
+                  <input type="membertype" className='login__input' placeholder='Member Type' value={memberType} onChange={(event) => setMemberType(event.target.value)} required />
               </div>
               <div className="signup-footer">
                 <button className='signup-submit' type='submit'>Sign Up</button>

@@ -25,7 +25,7 @@ function App() {
               <Route className='page' path="/" element={<Home />} />
               <Route className='page' path="/signup" element={<SignUp />} />
               <Route className='page' path="/signin" element={<SignIn />} />
-              <Route className='page' path="/map" element={<Map />} />
+              <Route className='page' path="/community" element={<Map />} />
               <Route className='page' path="/alumni" element={<Alumni />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="*" element={<Page404 />} />
