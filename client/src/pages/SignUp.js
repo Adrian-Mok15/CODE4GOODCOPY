@@ -118,6 +118,7 @@ const SignUp = () => {
           </div>
         </div>
         : 
+
         <div className="signup-form-parent">
           <div className="signup-form-container">
             <form className='login__form' onSubmit={onSubmit}>
