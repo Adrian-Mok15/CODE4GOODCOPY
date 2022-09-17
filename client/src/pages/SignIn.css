@@ -1,3 +1,7 @@
 .sign-up{
     padding: 5% 25%;
 }
+
+.ant-input, .ant-input-affix-wrapper, .ant-input-password{
+    width: 90% !important;
+}

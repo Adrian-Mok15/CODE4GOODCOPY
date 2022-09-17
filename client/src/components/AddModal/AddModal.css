@@ -1,0 +1,17 @@
+Button, #addButton{
+    background-color: #BA9D79 !important;
+    color: white;
+    border: none !important;
+}
+
+.ant-form-item-control-input-content{
+    text-align: right;
+}
+
+.ant-input, .ant-picker, .ant-input-number{
+    width: 75% !important;
+}
+
+.ant-modal-footer > button{
+    color: white !important;
+}
