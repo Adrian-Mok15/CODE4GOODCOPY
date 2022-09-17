@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation style={{zIndex: "1"}}/>
+        <Navigation className='nav-over'/>
         <Routes>
           <Route className='page' path="/" element={<Home />} />
           <Route className='page' path="/signup" element={<SignUp />} />
