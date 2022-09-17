@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 
 
 // Account Info
-import {CognitoUserAttribute} from 'amazon-cognito-identity-js';
+// import {CognitoUserAttribute} from 'amazon-cognito-identity-js';
 import { AccountContext } from '../context/Account';
 import UserPool from '../context/UserPool';
 
@@ -12,20 +12,19 @@ import SpinnerLoader from "../components/SpinnerLoader";
 
 const SignUp = () => {
   // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  // const [zipCode, setZipCode] = useState("");
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [username, setUserName] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  // const [emailSignUp, setEmailSignUp] = useState("");
+  const [usernameSignUp, setUserNameSignUp] = useState("");
   const [passwordSignUp, setPasswordSignUp] = useState("");
-  
 
   const [isLoading, setIsLoading] = useState(false);
   const [loggedIn, setLogin] = useState(
     JSON.parse(localStorage.getItem('is-login')) || false
   );
-  // const {authenticate} = useContext(AccountContext);
+  const {authenticate} = useContext(AccountContext);
 
   /* Control login or signup form to show */
   const [loginForm, setloginForm] = useState(true);
@@ -34,12 +33,11 @@ const SignUp = () => {
       return <Navigate to="/home" replace />;
     } 
 
-  const onSubmitSignUp = (event) => {
-      console.log("test login")
+    const onSubmitSignUp = (event) => {
       setIsLoading(true);
 
       event.preventDefault();
-      UserPool.signUp(username, passwordSignUp, [], null, (err, data) => {
+      UserPool.signUp(usernameSignUp, passwordSignUp, [], null, (err, data) => {
           if (err) {
             console.error(err);
             setIsLoading(false);
@@ -49,76 +47,65 @@ const SignUp = () => {
           setloginForm(true);
           console.log(data);
       });
-  };
+    };
   
-  const submitForm = async (e) => {
-    e.preventDefault();
+  const onSubmit = (event) => {
+    setIsLoading(true);
+    event.preventDefault();
+    authenticate(username, password)
+      .then(data => {
+        console.log("Logged in!", data);
+        localStorage.setItem('is-login', JSON.stringify(true));
+        setIsLoading(false);
+        setLogin(true);
+      })
+      .catch(err => {
+        console.error("Failed to login", err);
+        alert(err);
+        setIsLoading(false);
+      })
+    };
 
-    const formData = new FormData(e.target);
-
-    const inputObject = Object.fromEntries(formData);
-
-    console.log(inputObject);
-  };
-
-    // var roleAttribute = new CognitoUserAttribute(
-    //   {
-    //     Name: 'name',
-    //     Value: firstName.trim(),
-    //   },
-    //   // {
-    //   //   Name: 'family name',
-    //   //   Value: lastName.trim(),
-    //   // },
-    //   // {
-    //   //   Name: 'phone number',
-    //   //   Value: phone.trim(),
-    //   // },
-    //   // {
-    //   //   Name: 'zoneinfo',
-    //   //   Value: zipCode.trim(),
-    //   // }
-    // );
 
   return (
       <div className='login-page'>
           {isLoading ? <SpinnerLoader /> : null}
         
-          {loginForm ? 
-          <div className='login'>
-            <div className='login__container'>
-              <form className='login__form' onSubmit={onSubmit}>
-                <h1>Login</h1>
-                <div>
-                  <input name="userNameLoginIn" placeholder="userNameLoginIn" />
-                </div>
-                <div>
-                  <input name="password" placeholder="password" />
-                </div>
-                <button type="submit">Login</button>
-              </form>
-            </div>
-          </div>
-        : 
+        {/* {loginForm ?  */}
           <div className='login'>
             <div className='login__container'>
 
               <form className='login__form' onSubmit={onSubmitSignUp}>
-                <h1>Create Account</h1>
-                <div>
-                  <input name="first_name" placeholder="first_name" />
-                </div>
-                <div>
-                  <input name="last_name" placeholder="last_name" />
-                </div>
-                <div>
-                  <input name="userNameSingUp" placeholder="userNameSingUp" />
-                </div>
+                  <h1>Create Account</h1>
+                  <input type="text" placeholder="First Name" className='login__input' value={firstName} onChange={(event) => setFirstName(event.target.value)} required />
+                  <br />
+                  <input type="text" placeholder="Last Name" className='login__input' value={lastName} onChange={(event) => setLastName(event.target.value)} required />
+                  <br />
+                  <input type="text" placeholder="User Name" className='login__input' value={usernameSignUp} onChange={(event) => setUserNameSignUp(event.target.value)} required />
+                  <br />
+                  <input type="password" className='login__input' placeholder='Password' value={passwordSignUp} onChange={(event) => setPasswordSignUp(event.target.value)} required />
+                  <br />
+                  
+                  <button className='btn login__btn' type='submit'>Sign Up</button>
               </form>
               <button onClick={() => setloginForm(true)} className='plain__btn' >Already have an account? Log In</button>
             </div>
-          </div>
-        }
+        </div>
+        {/* // : 
+        // <div className='login'>
+        //     <div className='login__container'>
+        //     <form className='login__form' onSubmit={onSubmit}>
+        //       <h1>Login</h1>
+        //       <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
+        //       <br />
+        //       <input type="password" className='login__input' value={password} placeholder="Password" onChange={(event) => setPassword(event.target.value)} required />
+        //       <br />
+        //       <button className='btn login__btn' type='submit'>Login</button>
+        //       <button className='plain__btn' onClick={() => setloginForm(false)} >Need an account? Sign up</button>
+        //     </form>
+        //   </div>
+        //   </div>
+        // } */}
     </div>
   )
 }
