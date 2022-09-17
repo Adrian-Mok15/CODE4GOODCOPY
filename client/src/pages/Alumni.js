@@ -1,10 +1,13 @@
 import React from 'react'
 import styled, { withTheme } from 'styled-components'
-import {Card, Box, Typography, CardContent, CardMedia} from '@mui/material'
+import {Card, Box, Typography, CardContent, CardMedia, Button} from '@mui/material'
+import sendIt from './SendEmail'
 
 const Alumni = () => {
   return (
+
     <Page>
+
     <Typography sx = {{ fontFamily: "Raleway", fontSize: '30px'}}> Alumni Portal </Typography>
 
     <AlumniCard>
@@ -61,7 +64,10 @@ const Alumni = () => {
         image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
       />
     </AlumniCard>
-    
+
+
+    <Button onClick={sendIt}> Email JS - Send Email Test </Button>
+
     </Page>
   )
 }
