@@ -1,0 +1,28 @@
+.event-item-container {
+    background-color: white;
+    width: 35vw;
+    height: 200px;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.event-name {
+    font-weight: 600;
+    font-size: 18px;
+}

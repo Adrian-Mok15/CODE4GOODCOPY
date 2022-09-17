@@ -1,0 +1,9 @@
+.map-container {
+    width: 60vw;
+    height: 100vh;
+}
+
+.maps-page {
+    display: flex;
+    column-gap: 20px;
+}
