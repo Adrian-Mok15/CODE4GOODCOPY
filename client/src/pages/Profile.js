@@ -6,10 +6,10 @@ import Footer from '../components/navigation/Footer'
 
 
 // Get user data
-fetch('http://example.com/songs')
-	.then(response => response.json())
-	.then(data => console.log(data))
-  .catch(err => console.error(err));
+// fetch('http://example.com/songs')
+// 	.then(response => response.json())
+// 	.then(data => console.log(data))
+//   .catch(err => console.error(err));
   
 const sample_data = {
   username: "user's username",
@@ -24,9 +24,19 @@ const sample_data = {
 }
 
 export default function Profile() {
+  const { logout } = useContext(AccountContext);
+  const [loggedIn, setLogin] = useState(JSON.parse(localStorage.getItem('is-login')) || false);
+  
+  function logoff(){
+    logout();
+    localStorage.setItem('is-login', JSON.stringify(false));
+    setLogin(false);
+  }
+
   return (
 
     <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
+
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol lg="9" xl="7">
@@ -98,6 +108,8 @@ export default function Profile() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <button className='plain__btn' onClick={logoff}>Logout</button>
+
       <Footer />
     </div>
   );
