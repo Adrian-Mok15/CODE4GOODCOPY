@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import {Button} from '@mui/material'
-import {Button as B} from 'antd'
+import { Button as B } from 'antd'
+import badge from './badge.png'
 import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
@@ -27,7 +28,7 @@ const sample_data = {
   about: 'Hi, my name is Tyler, and I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you.',
   member_since: "2020",
   events_attended: '45',
-  badges: '11',
+  badges: '01',
 }
 
 export default function Profile() {
@@ -89,6 +90,14 @@ export default function Profile() {
                   <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
                     <MDBCardText className="font-italic mb-1">
                       {sample_data.about}
+                    </MDBCardText>
+                  </div>
+                </div>
+                <div className="mb-5">
+                  <p className="lead fw-normal mb-1">Badges</p>
+                  <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
+                    <MDBCardText className="font-italic mb-1">
+                      <img src={badge} style={{width:'150px'}} alt='resilience badge' />
                     </MDBCardText>
                   </div>
                 </div>
