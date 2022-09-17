@@ -28,18 +28,14 @@ app.use(cors({origin: true, credentials: true}));
 
 
 // routes
-
+app.post('/users/add', (req, res) => {
+    
+})
 
 
 
 // ports
-const port = process.env.PORT || 8080;
-
-app.get('/profile/:userId', (req, res) => { // users/Alex
-    return res.send(
-      `How are you ${req.params.name} !`,
-    );// How are you Alex
-  });
+const port = process.env.PORT;
 
 
 // listener
