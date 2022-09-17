@@ -1,3 +1,15 @@
 .home-head-p {
     color: black;
 }
+
+.myForm{
+    /* padding: 5% 15% !important; */
+    width:50%;
+    margin:auto;
+    
+}
+
+label, button{
+    font-size: 16px !important;
+}
+

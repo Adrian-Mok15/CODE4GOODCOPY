@@ -4,6 +4,8 @@ import {Card, Box, Typography, CardContent, CardMedia, Button, Avatar, IconButto
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
+import sendIt from './SendEmail'
+import './Alumni.css'
 
 const dataAlumni = []
 dataAlumni.push(new Array("John S", "https://randomuser.me/api/portraits/men/72.jpg"))
@@ -24,7 +26,7 @@ const Alumni = () => {
   return (
 
     <Page>
-    <Typography sx={{ fontFamily: "Roboto", fontSize: '30px', marginTop: '10px'}}> Alumni Portal </Typography>
+    <Typography sx={{ fontFamily: "system-ui", fontSize: '64px', margin: '5%'}}> Alumni Portal </Typography>
     <><>
       {dataAlumni.map((user) => {
         return (
@@ -58,7 +60,7 @@ export default Alumni;
 
 
 const AlumniCard = styled(Card)({
-  display: 'inline-block', padding: '10px', margin: '30px'
+  display: 'inline-block', padding: '10px', margin: '30px', fontFamily:'system-ui'
 });
 
 const Page = styled.div`
@@ -67,5 +69,5 @@ const Page = styled.div`
   height: 100vh;
   width: 100%;
   background-color: #F7E9CC;
-  allign-items: 
+  font-family: system-ui
 `
