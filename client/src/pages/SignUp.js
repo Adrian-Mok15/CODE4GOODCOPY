@@ -44,7 +44,7 @@ const SignUp = () => {
             alert(err);
           }
           setIsLoading(false);
-          setloginForm(true);
+          setloginForm(false);
           console.log(data);
       });
     };

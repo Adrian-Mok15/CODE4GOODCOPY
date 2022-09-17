@@ -4,6 +4,9 @@ import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
 
+import { useContext, useState } from 'react';
+import { AccountContext } from '../context/Account';
+
 
 // Get user data
 // fetch('http://example.com/songs')
