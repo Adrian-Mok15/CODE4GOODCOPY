@@ -4,10 +4,6 @@ export const routes = [
     link: "/",
   },
   {
-    name: "About",
-    link: "/",
-  },
-  {
     name: "Map",
     link: "/map",
   },

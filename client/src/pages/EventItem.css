@@ -1,0 +1,81 @@
+.event-item-container {
+    background-color: white;
+    width: 35vw;
+    height: 180px;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.event-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.attendees {
+    display: flex;
+    align-items: center;
+    top: 100px;
+    height: 100px;
+}
+
+.attendee-1, .attendee-2, .attendee-3, .attendee-4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #e5d7bc;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attendee-2, .attendee-3, .attendee-4 {
+    margin-left: -10px;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+
+.attendees-container {
+    display: flex;
+}
+
+.attendees-count {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: gray;
+}
+
+.event-time {
+    color: gray;
+}
+
+.attend-event {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
