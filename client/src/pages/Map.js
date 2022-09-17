@@ -40,18 +40,15 @@ export default function Map(props) {
 
     return (
       <div className="maps-page">
+        <div className="events-container">
+          <EventItem />
+          <EventItem />
+          <EventItem />
+          <EventItem />
+        </div>
         <Map />
-        <EventItem />
       </div>
     )
     
 
-}
-import React from 'react'
-import AddModal from '../components/AddModal/AddModal'
-const Map = () => {
-  return (
-    <div><AddModal/></div>
-
-  )
 }

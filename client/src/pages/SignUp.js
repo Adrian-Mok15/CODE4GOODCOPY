@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './SignUp.css';
 
@@ -46,11 +47,14 @@ class SignupForm extends React.Component {
               <label className="signup-label">Password</label>
               <input onChange={this.update('lastName')}/>
             </div>
-            <button type="submit" className="signup-submit">Submit</button>
+            <div className="signup-footer">
+              <button type="submit" className="signup-submit">Submit</button>
+              <div className="to-login">Already have an account? <Link to="/signin" className="sign-in-btn">Sign in</Link></div>
+            </div>
           </form>
         </div>
         <div className="signup-img">
-          <img src="https://img1.wsimg.com/isteam/ip/12c66d24-d4cb-4b8…t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1023,cg:true" alt="signup-img"/>
+          <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
         </div>
       </div>
     )
