@@ -2,6 +2,8 @@ import React from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import './Profile.css'
 import car from "./mount.jpg"
+import Footer from '../components/navigation/Footer'
+
 
 // Get user data
 fetch('http://example.com/songs')
@@ -96,6 +98,7 @@ export default function Profile() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <Footer />
     </div>
   );
 }
