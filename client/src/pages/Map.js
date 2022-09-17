@@ -3,10 +3,11 @@ import {GoogleMap, useLoadScript, MarkerF, InfoWindow} from '@react-google-maps/
 import EventItem from './EventItem';
 import { useMemo } from 'react';
 import React from 'react';
+// require('dotenv').config()
 
 export default function Map(props) {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyA3F0vP9ymuzI_mAJP2BNtxioSSbdqkri0',
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
     });
     if (!isLoaded) return <div>Loading...</div>
 
