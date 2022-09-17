@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './SignUp.css';
+import { useState, useEffect } from 'react';
+import {db} from './firebase-config.js'
+import {collection, getDocs} from 'firebase/firestore'
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -15,8 +18,9 @@ class SignupForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  
   handleSubmit() {
-    // store user in database
+    logCities()
   }
 
   update(field) {
@@ -59,6 +63,21 @@ class SignupForm extends React.Component {
       </div>
     )
   }
+}
+
+
+const logCities = async () => {
+  let citiesRef = db.collection('users');
+  let allCities = await citiesRef.get();
+  for(const doc of allCities.docs){
+    console.log(doc.id, '=>', doc.data());
+  }
+}
+
+function Test() {
+  console.log('made it')
+  const [users, setUsers] = useState([]);
+  const usersCollectionRef = collection(db, "users")
 }
 
 export default SignupForm;
