@@ -118,20 +118,44 @@ const SignUp = () => {
           </div>
         </div>
         : 
-
         <div className="signup-form-parent">
           <div className="signup-form-container">
+            <div className="signup-header-container">
+              <p className="signup-header">Greet our community!</p>
+            </div>
+
             <form className='login__form' onSubmit={onSubmit}>
-              <h1>Login</h1>
-              <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
-              <br />
-              <input type="password" className='login__input' value={password} placeholder="Password" onChange={(event) => setPassword(event.target.value)} required />
-              <br />
-              <button className='btn login__btn' type='submit'>Login</button>
-              <button className='plain__btn' onClick={() => setloginForm(true)}>Need an account? Sign up</button>
-            </form>
+              <div className="signup-field">
+              <p className="signup-label">USERNAME</p>
+              <input type="text" placeholder="User Name" className='login__input' value={username} onChange={(event) => setUserName(event.target.value)} required />
+              </div>
+              <div className="signup-field">
+              <p className="signup-label">PASSWORD</p>
+                  <input type="password" className='login__input' placeholder='Password' value={password} onChange={(event) => setPassword(event.target.value)} required />
+              </div>
+              <div className="signup-footer">
+                <button className='signup-submit' type='submit'>Sign In</button>
+                <div className='to-login' >Don't have an account? <div className="signin-btn" onClick={() => {setloginForm(true)}}>Join now</div></div>
+              </div>
+              </form>
+            </div>
+            <div className="signup-img">
+            <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
           </div>
-          </div>
+        </div>
+        // <div className="signup-form-parent">
+        //   <div className="signup-form-container">
+        //     <form className='login__form' onSubmit={onSubmit}>
+        //       <h1>Login</h1>
+        //       <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
+        //       <br />
+        //       <input type="password" className='login__input' value={password} placeholder="Password" onChange={(event) => setPassword(event.target.value)} required />
+        //       <br />
+        //       <button className='btn login__btn' type='submit'>Login</button>
+        //       <button className='plain__btn' onClick={() => setloginForm(true)}>Need an account? Sign up</button>
+        //     </form>
+        //   </div>
+        //   </div>
         }
     </div>
   )
