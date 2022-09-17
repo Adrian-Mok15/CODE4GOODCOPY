@@ -3,9 +3,16 @@ import styled, { withTheme } from 'styled-components'
 import {Card, Box, Typography, CardContent, CardMedia, Button, Avatar, IconButton} from '@mui/material'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-
+import SearchIcon from '@mui/icons-material/Search';
 import sendIt from './SendEmail'
 import './Alumni.css'
+import {Input, Space} from 'antd';
+
+const suffix = (
+  <SearchIcon/>
+);
+
+
 
 const dataAlumni = []
 dataAlumni.push(new Array("John S", "https://randomuser.me/api/portraits/men/72.jpg"))
@@ -26,7 +33,11 @@ const Alumni = () => {
   return (
 
     <Page>
-    <Typography sx={{ fontFamily: "system-ui", fontSize: '64px', margin: '5%'}}> Alumni Portal </Typography>
+      <div>
+        <Typography sx={{ fontFamily: "system-ui", fontSize: '64px', marginTop: '5%', marginBottom: '2%'}}> Alumni Portal </Typography>
+        <div><Input placeholder="Search" prefix={suffix} /></div>
+      </div>
+
     <><>
       {dataAlumni.map((user) => {
         return (
