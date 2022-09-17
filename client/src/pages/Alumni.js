@@ -4,8 +4,6 @@ import {Card, Box, Typography, CardContent, CardMedia, Button, Avatar, IconButto
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
-import sendIt from './SendEmail'
-
 
 const dataAlumni = []
 dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
@@ -16,6 +14,7 @@ dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
 
 const Alumni = () => {
   return (
+
     <Page>
     <Typography sx = {{ fontFamily: "Raleway", fontSize: '30px'}}> Alumni Portal </Typography>
     <AlumniCard>
