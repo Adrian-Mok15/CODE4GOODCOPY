@@ -51,9 +51,9 @@ export default function Profile() {
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                   <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt="Generic placeholder image" className="img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
-                  <button outline color="dark" style={{marginTop:'6px', marginLeft:'40px', height: '50px', zIndex: '2'}}>
+                  <MDBBtn outline color="dark" style={{marginTop:'6px', marginLeft:'40px', height: '39px', zIndex: '2'}}>
                     Edit profile
-                  </button>
+                  </MDBBtn>
                 </div>
                 <div className="ms-3" style={{ marginTop: '140px', marginLeft: '30px'}}>
                   <MDBTypography tag="h5" style={{color:'white'}}>{sample_data.name}</MDBTypography>

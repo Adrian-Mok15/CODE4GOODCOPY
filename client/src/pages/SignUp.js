@@ -12,12 +12,12 @@ import UserPool from '../context/UserPool';
 import SpinnerLoader from "../components/SpinnerLoader";
 
 const SignUp = () => {
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [usernameSignUp, setUserNameSignUp] = useState("");
-  const [passwordSignUp, setPasswordSignUp] = useState("");
+  const [username, setUserName] = useState("User1");
+  const [password, setPassword] = useState("#CFG-100");
+  const [firstName, setFirstName] = useState("Tom");
+  const [lastName, setLastName] = useState("Lo");
+  const [usernameSignUp, setUserNameSignUp] = useState("User1");
+  const [passwordSignUp, setPasswordSignUp] = useState("#CFG-100");
 
   const [isLoading, setIsLoading] = useState(false);
   const [loggedIn, setLogin] = useState(

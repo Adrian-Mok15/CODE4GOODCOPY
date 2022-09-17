@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from "react";
 import { AccountContext } from './Account';
-// import CognitoIdentityServiceProvider from 'aws'
+
+// Verify user status to AWS Cognito
 
 const Status = () => {
     const [userEmail, setStatus] = useState('guest');
