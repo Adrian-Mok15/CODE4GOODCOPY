@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import React from 'react';
-import './SignUp.css';
-import { useState, useEffect } from 'react';
-import {db} from './firebase-config.js'
-import {collection, getDocs} from 'firebase/firestore'
-=======
 import React, { useState, useContext } from 'react'
 import { Navigate } from 'react-router-dom'
->>>>>>> michelle
 
 
-<<<<<<< HEAD
-  
-  handleSubmit() {
-    logCities()
-  }
-=======
 // Account Info
 // import {CognitoUserAttribute} from 'amazon-cognito-identity-js';
 import { AccountContext } from '../context/Account';
 import UserPool from '../context/UserPool';
->>>>>>> michelle
 
 // Components
 import SpinnerLoader from "../components/SpinnerLoader";
