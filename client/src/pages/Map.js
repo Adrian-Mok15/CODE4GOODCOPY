@@ -68,6 +68,7 @@ export default function Map(props) {
     return (
       <div className="maps-page">
         <div>
+          <AddModal />
           <div className="events-container">
             <EventItem />
             <EventItem />
