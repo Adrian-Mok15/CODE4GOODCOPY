@@ -1,8 +1,8 @@
 # team-13
 
-Jream Foundation Code for Good
+We are Team 13 for the JPMorgan code for <good> 2022 Hackathon. We built a project in 24 hrs. 😁
 
-Prompt:
+ ## Prompt:
 
 How can technology impact what this connection and engagement looks like in the future once participants age out of the program? 
 Consider how to engage future alumni, track successes, share stories, and incentivize alumni to stay connected.
@@ -19,7 +19,12 @@ Second Goal:
 We also want to take care of our alumnus as a way to keep them within the community. Alumnus are those who finished with these programs and are looking for jobs. Our main way of incentivizing alumnus to stay within the community is to create an outlet for these alumnus to be hired through Jream. The idea is that these alumnus gained real world teaching experience and showed that they are a an involved member of this community. The skills they gained should be marketable and companies should trust the quality of people that graduate from Jreams.
 
 
-What We Built:
+## What We Built:
+
+* React + JS
+* Material UI
+* AWS
+* MongoDB
 
 The webapp we created facilitates creating group events and makes details about said events more available. We used google maps API for locational data tied in with personal contact info to allow users to communicate with others in Jream to organize smaller sports events and tutoring sessions. Any user can have searchable flags such as “Tutor for math” or “Looking for soccer teammates” that connects the community in way better than word of mouth. 
 
