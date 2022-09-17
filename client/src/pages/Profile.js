@@ -1,7 +1,7 @@
 import React from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import './Profile.css'
-import car from "./mount.jpg"
+import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
 
 
@@ -31,7 +31,7 @@ export default function Profile() {
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol lg="9" xl="7">
             <MDBCard>
-              <div className="rounded-top text-white d-flex flex-row" style={{ backgroundImage:`url(${car})`, height: '200px' }}>
+              <div className="rounded-top text-white d-flex flex-row" style={{ backgroundImage:`url(${night})`, height: '200px' }}>
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                   <MDBCardImage src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                     alt="Generic placeholder image" className="img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
@@ -40,8 +40,8 @@ export default function Profile() {
                   </button>
                 </div>
                 <div className="ms-3" style={{ marginTop: '140px', marginLeft: '30px'}}>
-                  <MDBTypography tag="h5" style={{color:'black'}}>{sample_data.name}</MDBTypography>
-                  <MDBCardText style={{color:'black'}}>{sample_data.user_location}</MDBCardText>
+                  <MDBTypography tag="h5" style={{color:'white'}}>{sample_data.name}</MDBTypography>
+                  <MDBCardText>{sample_data.user_location}</MDBCardText>
                 </div>
               </div>
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
