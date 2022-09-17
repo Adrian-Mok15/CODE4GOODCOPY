@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Map from './pages/Map';
 import Navigation from './components/navigation/navigation/Navigation';
+import Page404 from './pages/Page404';
 
 import { Account } from './context/Account';
 

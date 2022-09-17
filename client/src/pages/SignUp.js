@@ -30,7 +30,7 @@ const SignUp = () => {
   const [loginForm, setloginForm] = useState(true);
 
       if (loggedIn) {
-      return <Navigate to="/home" replace />;
+      return <Navigate to="/profile" replace />;
     } 
 
     const onSubmitSignUp = (event) => {
@@ -71,7 +71,7 @@ const SignUp = () => {
       <div className='login-page'>
           {isLoading ? <SpinnerLoader /> : null}
         
-        {/* {loginForm ?  */}
+      {loginForm ? 
           <div className='login'>
             <div className='login__container'>
 
@@ -88,24 +88,27 @@ const SignUp = () => {
                   
                   <button className='btn login__btn' type='submit'>Sign Up</button>
               </form>
-              <button onClick={() => setloginForm(true)} className='plain__btn' >Already have an account? Log In</button>
+            <button onClick={() => {
+              setloginForm(false)
+              console.log(loginForm)
+            }} className='plain__btn' >Already have an account? Log In</button>
             </div>
         </div>
-        {/* // : 
-        // <div className='login'>
-        //     <div className='login__container'>
-        //     <form className='login__form' onSubmit={onSubmit}>
-        //       <h1>Login</h1>
-        //       <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
-        //       <br />
-        //       <input type="password" className='login__input' value={password} placeholder="Password" onChange={(event) => setPassword(event.target.value)} required />
-        //       <br />
-        //       <button className='btn login__btn' type='submit'>Login</button>
-        //       <button className='plain__btn' onClick={() => setloginForm(false)} >Need an account? Sign up</button>
-        //     </form>
-        //   </div>
-        //   </div>
-        // } */}
+        : 
+        <div className='login'>
+            <div className='login__container'>
+            <form className='login__form' onSubmit={onSubmit}>
+              <h1>Login</h1>
+              <input type="text" className='login__input' value={username} placeholder='User Name' onChange={(event) => setUserName(event.target.value)} required />
+              <br />
+              <input type="password" className='login__input' value={password} placeholder="Password" onChange={(event) => setPassword(event.target.value)} required />
+              <br />
+              <button className='btn login__btn' type='submit'>Login</button>
+              <button className='plain__btn' onClick={() => setloginForm(true)}>Need an account? Sign up</button>
+            </form>
+          </div>
+          </div>
+        }
     </div>
   )
 }
