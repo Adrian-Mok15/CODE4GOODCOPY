@@ -17,15 +17,15 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 <RightNav>
                     <NavRoutes>
                         {routes.map((route) => {
-                            if (route.name === 'About') {
-                                return (
-                                    <LinkRS to="about" spy={true} smooth={true} offset={50}>
-                                        <NavRoute to={route.link} key={route.name}>
-                                            {route.name}
-                                        </NavRoute>
-                                    </LinkRS>
-                                )
-                            }
+                            // if (route.name === 'About') {
+                            //     return (
+                            //         <LinkRS to="about" spy={true} smooth={true} offset={50}>
+                            //             <NavRoute to={route.link} key={route.name}>
+                            //                 {route.name}
+                            //             </NavRoute>
+                            //         </LinkRS>
+                            //     )
+                            // }
                             if (route.name === 'Contact') {
                                 return (
                                     <LinkRS to="contactform" spy={true} smooth={true} offset={2}>
