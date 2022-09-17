@@ -26,7 +26,7 @@ const Alumni = () => {
   return (
 
     <Page>
-    <Typography sx={{ fontFamily: "system-ui", fontSize: '30px', marginTop: '10px'}}> Alumni Portal </Typography>
+    <Typography sx={{ fontFamily: "system-ui", fontSize: '64px', margin: '5%'}}> Alumni Portal </Typography>
     <><>
       {dataAlumni.map((user) => {
         return (
