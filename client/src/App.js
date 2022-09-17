@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp';
 import Map from './pages/Map';
 import Navigation from './components/navigation/navigation/Navigation';
 
+import "antd/dist/antd.css";
 
 function App() {
   return (
