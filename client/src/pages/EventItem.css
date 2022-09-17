@@ -23,8 +23,10 @@
 }
 
 .event-name {
-    font-weight: 600;
-    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .attendees {
@@ -70,7 +72,11 @@
 }
 
 .event-time {
-    color: gray;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 14px;
+    color: #b99d79;
 }
 
 .attend-event {
@@ -78,4 +84,16 @@
     align-items: center;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
+    background-color: white;
+    border-style: none;
+    border-radius: 28px;
+    font-weight: 600;
+}
+
+.attend-event:focus {
+    border-style: none;
+}
+
+.attend-event:hover {
+    background-color: whitesmoke;
 }

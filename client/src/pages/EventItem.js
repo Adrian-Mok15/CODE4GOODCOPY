@@ -14,8 +14,8 @@ class EventItem extends React.Component {
                 <div>
                     <div className="event-header">
                         <div className="event-header-info">
-                            <div className="event-name">Event name</div>
-                            <div className="event-time">Event time</div>
+                            <div className="event-name">Career fair</div>
+                            <div className="event-time">September 30th 3:00pm</div>
                         </div>
                         <button className="attend-event" onClick={sendIt}>
                             Attend event
