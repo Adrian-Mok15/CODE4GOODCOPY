@@ -83,38 +83,35 @@ const SignUp = () => {
           <div className="signup-form-parent">
           <div className="signup-form-container">
             <div className="signup-header-container">
-              <p className="signup-header">Sign up here!</p>
+              <p className="signup-header">Join our community!</p>
             </div>
 
             <form className='login__form' onSubmit={onSubmitSignUp}>
               <div className="signup-field">
-                  <label className="signup-label">First Name</label>
+                  <p className="signup-label">FIRST NAME</p>
                   <input type="text" placeholder="First Name" className='login__input' value={firstName} onChange={(event) => setFirstName(event.target.value)} required />
               </div>
               <div className="signup-field">
-              <label className="signup-label">Last Name</label>
+              <p className="signup-label">LAST NAME</p>
                   <input type="text" placeholder="Last Name" className='login__input' value={lastName} onChange={(event) => setLastName(event.target.value)} required />
               </div>
               <div className="signup-field">
-              <label className="signup-label">Username</label>
+              <p className="signup-label">USERNAME</p>
               <input type="text" placeholder="User Name" className='login__input' value={usernameSignUp} onChange={(event) => setUserNameSignUp(event.target.value)} required />
               </div>
               <div className="signup-field">
-              <label className="signup-label">Password</label>
+              <p className="signup-label">PASSWORD</p>
                   <input type="password" className='login__input' placeholder='Password' value={passwordSignUp} onChange={(event) => setPasswordSignUp(event.target.value)} required />
               </div>
               <div className="signup-field">
-              <label className="signup-label">Member Type</label>
+              <p className="signup-label">MEMBER TYPE</p>
                   <input type="membertype" className='login__input' placeholder='Member Type' value={memberType} onChange={(event) => setMemberType(event.target.value)} required />
               </div>
               <div className="signup-footer">
                 <button className='signup-submit' type='submit'>Sign Up</button>
+                <div className='to-login' >Already have an account? <div className="signin-btn" onClick={() => {setloginForm(false)}}>Sign in</div></div>
               </div>
               </form>
-            <button onClick={() => {
-              setloginForm(false)
-              
-            }} className='to-login' >Already have an account?</button>
             </div>
             <div className="signup-img">
             <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
