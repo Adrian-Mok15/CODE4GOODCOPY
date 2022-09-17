@@ -25,7 +25,7 @@ const sample_data = {
   name: "John Smith",
   profile_pic: "test",
   user_type: "alunmi",
-  about: 'Hi, my name is Tyler, and I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you.',
+  about: 'Hi, my name is John, and I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you.',
   member_since: "2020",
   events_attended: '45',
   badges: '01',
