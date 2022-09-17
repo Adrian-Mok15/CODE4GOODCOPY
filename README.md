@@ -41,6 +41,11 @@ Recruiters that trust Jream can set up career fair events that solely target our
  
  <img src="https://i.imgur.com/rC5xBGy.png" align="center"
      alt="Size Limit logo by Anton Lovchikov" width=450>
+     
+Community Page: Allows the user to see events in their area with alumni 🌍
+     
+ <img src="https://i.imgur.com/G8Uta7V.png" align="center"
+     alt="Size Limit logo by Anton Lovchikov" width=450>
  
  Alumni Page: Allows users to find alumni and connect 😎
 
