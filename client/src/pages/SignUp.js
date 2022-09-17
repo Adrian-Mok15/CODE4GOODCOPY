@@ -29,7 +29,7 @@ const SignUp = () => {
   /* Control login or signup form to show */
   const [loginForm, setloginForm] = useState(true);
 
-      if (loggedIn) {
+    if (loggedIn) {
       return <Navigate to="/profile" replace />;
     } 
 
