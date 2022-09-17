@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 import sendIt from './SendEmail'
-
+import './Alumni.css'
 
 const dataAlumni = []
 dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
@@ -17,7 +17,11 @@ dataAlumni.push(new Array("First Last", "https://picsum.photos/200/200.jpg"))
 const Alumni = () => {
   return (
     <Page>
-    <Typography sx = {{ fontFamily: "Raleway", fontSize: '30px'}}> Alumni Portal </Typography>
+      <div className="head">
+      <Typography sx = {{ fontSize: '50px'}}> Alumni Portal </Typography>
+      </div>
+      
+    
     <AlumniCard>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
