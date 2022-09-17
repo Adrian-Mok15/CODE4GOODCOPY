@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 import './Profile.css'
 import night from "./nights.jpg"
 import Footer from '../components/navigation/Footer'
 
-import { useContext, useState } from 'react';
 import { AccountContext } from '../context/Account';
+import { Navigate } from 'react-router-dom'
 
 
 // Get user data
@@ -36,8 +36,11 @@ export default function Profile() {
     setLogin(false);
   }
 
-  return (
+  if (!loggedIn) {
+    return <Navigate to="/signup" replace />;
+  } 
 
+  return (
     <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
 
       <MDBContainer className="py-5 h-100">
