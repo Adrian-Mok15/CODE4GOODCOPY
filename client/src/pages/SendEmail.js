@@ -1,8 +1,8 @@
 import React from 'react'
 import emailjs from '@emailjs/browser';
 
-var public_key = process.env.EMAIL_JS_API_PUBLIC_KEY;
-const priv_key = process.env.EMAIL_JS_API_PRIV_KEY;
+var public_key = process.env.REACT_APP_EMAIL_API_PUBLIC_KEY;
+const priv_key = process.env.REACT_APP_EMAIL_JS_API_PRIV_KEY;
 
 
 var contactdetail = {
@@ -13,7 +13,7 @@ var contactdetail = {
 
 
 const sendIt = function() {
-    emailjs.send('service_kdfqz4m', 'template_7jesark', contactdetail, 'D1eYFDiYusByCe98H')
+    emailjs.send('service_kdfqz4m', 'template_7jesark', contactdetail, public_key)
     .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
     }, function(error) {

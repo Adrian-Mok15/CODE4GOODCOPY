@@ -12,6 +12,7 @@ export default function Map(props) {
     if (!isLoaded) return <div>Loading...</div>
 
     function Map() {
+      {console.log("hello" + process.env.REACT_APP_GOOGLE_MAPS_KEY)}
         const center = useMemo(() => ({ lat: 40.7128, lng: -74.0060 }), []);
         const [selected, setSelected] = React.useState(null);
         return (
