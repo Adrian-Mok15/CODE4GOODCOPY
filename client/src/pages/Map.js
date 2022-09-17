@@ -1,8 +1,8 @@
 import React from 'react'
-import AddEvent from '../components/AddEvent/AddEvent'
+import AddModal from '../components/AddModal/AddModal'
 const Map = () => {
   return (
-    <div><AddEvent/></div>
+    <div><AddModal/></div>
 
   )
 }

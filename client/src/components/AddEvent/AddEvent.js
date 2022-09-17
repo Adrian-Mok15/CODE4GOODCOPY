@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, DatePicker,InputNumber } from 'antd';
+import './AddEvent.css'
 
 const AddEvent = props => {
 
@@ -7,14 +8,15 @@ const AddEvent = props => {
     }
 
     return (
-        <>
+        <div class="add-event">
 
             <Form
-                name="login"
+                name="event"
                 onFinish={onFinish}
             >
                 <Form.Item
                     name= 'Event Name'
+                    label='Event Name'
                     rules={[{required: true},]}
                 >
 
@@ -23,6 +25,7 @@ const AddEvent = props => {
 
                 <Form.Item
                     name= 'Event Description'
+                    label='Event Description'
                     rules={[{required: true},]}
                 >
                     <Input placeholder='Event Description' />
@@ -30,6 +33,7 @@ const AddEvent = props => {
 
                 <Form.Item
                     name= 'Event Date'
+                    label='Event Date'
                     rules={[{required: true},]}
                     
                 >
@@ -38,6 +42,7 @@ const AddEvent = props => {
 
                 <Form.Item
                     name= 'Event Location'
+                    label='Event Location'
                     rules={[{required: true},]}
                 >
                     <Input placeholder='Event Location' />
@@ -45,17 +50,18 @@ const AddEvent = props => {
 
                 <Form.Item
                     name= 'Max Attendees'
+                    label='Max Attendees'
                 >
                     <InputNumber />
                 </Form.Item>
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit" >
-                        Log in
+                        Create Event
                     </Button>  
                 </Form.Item>
             </Form>
-        </>
+        </div>
     )
 }
 
