@@ -7,7 +7,7 @@ We are Team 13 for the JPMorgan code for <good> 2022 Hackathon. We built a proje
 
  ## About:
 
-How can technology impact what this connection and engagement looks like in the future once participants age out of the program? 
+💡How can technology impact what this connection and engagement looks like in the future once participants age out of the program? 
 Consider how to engage future alumni, track successes, share stories, and incentivize alumni to stay connected.
 
 Goal #1:
@@ -31,13 +31,23 @@ The webapp we created facilitates creating group events and makes details about 
 Recruiters that trust Jream can set up career fair events that solely target our talented alumnus. Furthermore, they can access a page with all the alumnus who are looking for employment along with their interests. Allowing recruiters to get in contact with promising youth will both bring in new talents who were previously not a part of dream, as well as encourage alumni to stay within the community and participate in events
  
  ## Features:
+   
+ Sign-Up: Allows students and tutors/mentors to sign up on the platform ❤️
+     
+  <img src="https://i.imgur.com/JckWb9v.png" align="center"
+     alt="Size Limit logo by Anton Lovchikov" width=450>   
+ 
+ Profile Page: Allows users to view their personal profiles 😍
+ 
+ <img src="https://i.imgur.com/rC5xBGy.png" align="center"
+     alt="Size Limit logo by Anton Lovchikov" width=450>
  
  Alumni Page: Allows users to find alumni and connect 😎
 
 <img src="https://imgur.com/EQ6OIVV.png" align="center"
      alt="Size Limit logo by Anton Lovchikov" width=450>
  
- Profile Page: Allows users to view their personal profiles 😍
  
- <img src="https://i.imgur.com/rC5xBGy.png" align="center"
-     alt="Size Limit logo by Anton Lovchikov" width=450>
+     
+
+    
