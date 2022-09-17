@@ -1,0 +1,16 @@
+.SpinnerLoader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur( 7px );
+    background: rgba(30, 30, 30, 0.35);
+    display: flex;
+    height: 100%; 
+    justify-content: center;
+    z-index: 100;    
+}
+.SpinnerLoader__svg {
+    width: 25%;
+}

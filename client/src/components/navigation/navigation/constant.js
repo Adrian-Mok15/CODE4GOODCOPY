@@ -11,10 +11,10 @@ export const routes = [
     name: "Alumni",
     link: "/alumni",
   },
-  {
-    name: "Profile",
-    link: "/profile",
-  },
+  // {
+  //   name: "Profile",
+  //   link: "/profile",
+  // },
   {
     name: "Sign Up",
     link: "/signup",

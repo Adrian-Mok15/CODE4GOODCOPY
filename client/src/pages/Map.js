@@ -3,12 +3,37 @@ import {GoogleMap, useLoadScript, MarkerF, InfoWindow} from '@react-google-maps/
 import EventItem from './EventItem';
 import { useMemo } from 'react';
 import React from 'react';
+// require('dotenv').config()
+import axios from "axios"
+{/* <script src="https://unpkg.com/axios/dist/axios.min.js"></script> */}
+
 
 export default function Map(props) {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyA3F0vP9ymuzI_mAJP2BNtxioSSbdqkri0',
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
     });
     if (!isLoaded) return <div>Loading...</div>
+
+    geocode();
+
+    function geocode(){
+      var location = "22 Main st Boston MA";//hardcoded
+      axios.get("https://maps.googleapis.com/maps/api/geocode/json",{
+        params:{
+          address:location,
+          key: process.env.REACT_APP_GOOGLE_MAPS_KEY
+        }
+      })
+      .then(function(response){
+        // console.log(response.data.results[0] + "hello");
+        // console.log((response.data.results[0].geometry.location.lng));
+        let coord = (response.data.results[0].geometry.location);
+        let lat = coord.lat;
+        let lon = coord.lng;
+
+        console.log(lat + " " + lon);
+      })
+    }
 
     function Map() {
         const center = useMemo(() => ({ lat: 40.7128, lng: -74.0060 }), []);
