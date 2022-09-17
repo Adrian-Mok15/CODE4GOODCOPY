@@ -113,23 +113,4 @@ const SignUp = () => {
   )
 }
 
-<<<<<<< HEAD
-
-const logCities = async () => {
-  let citiesRef = db.collection('users');
-  let allCities = await citiesRef.get();
-  for(const doc of allCities.docs){
-    console.log(doc.id, '=>', doc.data());
-  }
-}
-
-function Test() {
-  console.log('made it')
-  const [users, setUsers] = useState([]);
-  const usersCollectionRef = collection(db, "users")
-}
-
-export default SignupForm;
-=======
 export default SignUp
->>>>>>> michelle
