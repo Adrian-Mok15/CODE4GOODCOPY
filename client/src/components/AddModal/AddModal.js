@@ -1,7 +1,7 @@
 import {  useState, React  } from 'react';
 import { Modal, Button, Form, Input, DatePicker, InputNumber } from 'antd';
 import AddEvent from '../AddEvent/AddEvent'
-
+import './AddModal.css'
 const AddModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,10 +24,12 @@ const AddModal = () => {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button id='addButton' onClick={showModal}>
         Add Event +
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}
+        okButtonProps={{ style: { display: 'none' } }}
+        >
       <Form
                 name="event"
                 onFinish={onFinish}
