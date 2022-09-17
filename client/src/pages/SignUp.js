@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Navigate } from 'react-router-dom'
-
+import "./SignUp.css"
 
 // Account Info
 // import {CognitoUserAttribute} from 'amazon-cognito-identity-js';
@@ -103,7 +103,7 @@ const SignUp = () => {
             <button onClick={() => {
               setloginForm(false)
               
-            }} className='plain__btn' >Already have an account? Log In</button>
+            }} className='signup-submit' >Already have an account? Log In</button>
             </div>
             <div className="signup-img">
             <img src="https://www.brainline.org/sites/default/files/styles/teaser_square/public/basic/youarenotalone.jpg?itok=szqaCno_" alt="signup-img"/>
