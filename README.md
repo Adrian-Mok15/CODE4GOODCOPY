@@ -1,4 +1,4 @@
-# team-13
+# This is a copy paste of a hackathon project from JPMC that i worked on. The project is private, but JPMC will make it public in due time. Until then, here is the project. 
 
 We are Team 13 for the JPMorgan code for <good> 2022 Hackathon. We built a project in 24 hrs. 😁
 
